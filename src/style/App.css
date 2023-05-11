@@ -1,0 +1,14 @@
+main {
+  font-family: Georgia, "Times New Roman", Times, serif;
+  color: #40513b;
+}
+.Parent {
+  display: flex;
+  width: 100%;
+  margin-bottom: 2%;
+}
+
+.enfant2 {
+  width: 50%;
+  justify-content: center;
+}

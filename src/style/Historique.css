@@ -1,0 +1,30 @@
+table {
+  width: 80%;
+  margin-left: 8%;
+  margin-bottom: 1%;
+  border-collapse: separate;
+  border-spacing: 0;
+  color: white;
+}
+th {
+  background-color: #c7e8ca;
+  padding: 10px;
+  color: #40513b;
+}
+td {
+  padding: 10px;
+}
+
+tr:first-child th:first-child {
+  border-top-left-radius: 10px;
+}
+tr:first-child th:last-child {
+  border-top-right-radius: 10px;
+}
+
+tr:last-child th:first-child {
+  border-bottom-left-radius: 10px;
+}
+tr:last-child th:last-child {
+  border-bottom-right-radius: 10px;
+}

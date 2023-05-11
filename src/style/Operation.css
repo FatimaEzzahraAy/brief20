@@ -1,0 +1,54 @@
+form {
+  width: 100%;
+  border: 2px solid #c7e8ca;
+  border-radius: 10px;
+  background-color: #ddf7e3;
+  margin-left: 10%;
+}
+
+input,
+textarea,
+select {
+  width: 80%;
+  padding: 8px 8px;
+  margin-top: 1%;
+  margin-left: 10%;
+  margin-right: 10%;
+  display: inline-block;
+  border: 2px solid #c7e8ca;
+  border-radius: 10px;
+  box-sizing: border-box;
+  color: #40513b;
+  outline: none;
+}
+input::placeholder {
+  color: #40513b;
+}
+textarea::placeholder {
+  color: #40513b;
+}
+option {
+  color: #40513b;
+}
+
+button {
+  background-color: #c7e8ca;
+  padding: 14px 0;
+  margin-top: 2%;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-bottom: 5%;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 80%;
+  border-radius: 30px;
+}
+button:hover {
+  opacity: 0.8;
+  background-color: #5d9c59;
+}
+.titre {
+  color: #40513b;
+  margin-left: 10%;
+}
