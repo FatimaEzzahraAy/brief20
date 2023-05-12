@@ -7,12 +7,13 @@ table {
   color: white;
 }
 th {
-  background-color: #c7e8ca;
+  /* background-color: #c7e8ca; */
   padding: 10px;
   color: #40513b;
 }
 td {
   padding: 10px;
+  text-align: center;
 }
 
 tr:first-child th:first-child {

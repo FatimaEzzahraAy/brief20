@@ -1,20 +1,25 @@
-import "../style/Categorie.css"
+import { useState } from "react";
 
-function Categorie() {
-    // const [catNouv, setCatNouv] = useState("");
-    
-    return <form>
-        <h3>Ajouter une catégorie:</h3>
-        <hr/>
+function Categorie({ catNouv, setCatNouv, tableType, setTableType }) {
+  function AjouterCat(e) {
+    e.preventDefault();
+    setTableType([...tableType, { AjCat: catNouv }]);
+  }
+  return (
+    <div>
+      {/* <h3>Ajouter une catégorie:</h3> */}
+      <form>
         <div>
           <input
             type="text"
             placeholder="Catégorie"
-            // onChange={(e) => setCatNouv(e.target.value)}
+            onChange={(e) => setCatNouv(e.target.value)}
           />
-          <button >Ajouter une catégorie</button>
+          <button onClick={AjouterCat}>Ajouter une catégorie</button>
         </div>
-    </form>
+      </form>
+    </div>
+  );
 }
 
 export default Categorie;

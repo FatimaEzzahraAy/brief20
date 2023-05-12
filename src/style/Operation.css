@@ -2,7 +2,7 @@ form {
   width: 100%;
   border: 2px solid #c7e8ca;
   border-radius: 10px;
-  background-color: #ddf7e3;
+  background-color: #3C6255;
   margin-left: 10%;
 }
 
@@ -18,21 +18,22 @@ select {
   border: 2px solid #c7e8ca;
   border-radius: 10px;
   box-sizing: border-box;
-  color: #40513b;
+  /* color: #40513b; */
   outline: none;
+  height: 40px;
 }
 input::placeholder {
-  color: #40513b;
+  color: #61876E;
 }
 textarea::placeholder {
-  color: #40513b;
+  color: #61876E;
 }
 option {
-  color: #40513b;
+  color: #61876E;
 }
 
 button {
-  background-color: #c7e8ca;
+  background-color: #A6BB8D;
   padding: 14px 0;
   margin-top: 2%;
   margin-left: 10%;
@@ -43,12 +44,10 @@ button {
   cursor: pointer;
   width: 80%;
   border-radius: 30px;
+  height: 40px;
 }
 button:hover {
   opacity: 0.8;
-  background-color: #5d9c59;
+  background-color: #EAE7B1;
 }
-.titre {
-  color: #40513b;
-  margin-left: 10%;
-}
+
