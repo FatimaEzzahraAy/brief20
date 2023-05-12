@@ -9,6 +9,7 @@ function Operation({
   OpDepense,
   setOpDepense,
   tableType,
+  setOpAjouter,
 }) {
   const [nom, setnom] = useState("");
   const [montant, setmotant] = useState(0);
@@ -16,26 +17,32 @@ function Operation({
   const [desc, setdesc] = useState("");
   const [cat, setcat] = useState("");
   const [dateT, setdateT] = useState("");
+  let erreur = "";
 
   function Valider(e) {
-    if (type === "Revenu") {
-      setOpRevenu([...OpRevenu, { montant: montant }]);
-    } else if (type == "Dépense");
-    {
-      setOpDepense([...OpDepense, { montant: montant }]);
-    }
     e.preventDefault();
-    setTableOp([
-      ...tableOp,
+
+    if (nom === "" || montant === "" || desc === "") {
+      erreur = "Veuillez remplir les champs";
+    } else {
+      setTableOp([
+        ...tableOp,
+        {
+          Nom: nom,
+          Montant: montant,
+          Type: type,
+          Desc: desc,
+          Cat: cat,
+          DateT: dateT,
+        },
+      ]);
+      if (type === "Revenu") {
+        setOpRevenu([...OpRevenu, { montant: montant }]);
+      } else if (type == "Dépense");
       {
-        Nom: nom,
-        Montant: montant,
-        Type: type,
-        Desc: desc,
-        Cat: cat,
-        DateT: dateT,
-      },
-    ]);
+        setOpDepense([...OpDepense, { montant: montant }]);
+      }
+    }
   }
 
   return (
@@ -79,7 +86,10 @@ function Operation({
           placeholder="Date"
           onChange={(e) => setdateT(e.target.value)}
         />
-        <button onClick={Valider}>Sauvegarder</button>
+        <div className="BtnValidation">
+          <button onClick={Valider}>Valider</button>
+          <button onClick={() => setOpAjouter("no")}>Fermer</button>
+        </div>
       </form>
     </div>
   );

@@ -35,6 +35,7 @@ function App() {
                 OpDepense={OpDepense}
                 setOpDepense={setOpDepense}
                 tableType={tableType}
+                setOpAjouter={setOpAjouter}
               />
             )}
           </div>
@@ -45,6 +46,7 @@ function App() {
                 setCatNouv={setCatNouv}
                 tableType={tableType}
                 setTableType={setTableType}
+                setCatAjouter={setCatAjouter}
               />
             )}
           </div>

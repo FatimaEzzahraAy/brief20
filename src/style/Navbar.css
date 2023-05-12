@@ -14,7 +14,13 @@
 }
 .menu .buttonAj button {
   background-color: transparent;
+  border: none;
+  cursor: pointer;
   color: white;
-  /* width: 100%; */
   margin: 0%;
+}
+
+.menu .buttonAj button:hover {
+  background-color: #3c6255;
+  border-radius: 30px;
 }

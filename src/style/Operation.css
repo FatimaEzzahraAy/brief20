@@ -2,8 +2,9 @@ form {
   width: 100%;
   border: 2px solid #c7e8ca;
   border-radius: 10px;
-  background-color: #3C6255;
-  margin-left: 10%;
+  background-color: #3c6255;
+  margin-top: 5%;
+  padding: 3%;
 }
 
 input,
@@ -23,31 +24,31 @@ select {
   height: 40px;
 }
 input::placeholder {
-  color: #61876E;
+  color: #61876e;
 }
 textarea::placeholder {
-  color: #61876E;
+  color: #61876e;
 }
 option {
-  color: #61876E;
+  color: #61876e;
 }
 
-button {
-  background-color: #A6BB8D;
-  padding: 14px 0;
-  margin-top: 2%;
-  margin-left: 10%;
-  margin-right: 10%;
-  margin-bottom: 5%;
+/* button */
+.BtnValidation {
+  width: 80%;
+  display: flex;
+  margin: 2%;
+}
+.BtnValidation button {
+  background-color: #c7e8ca;
+  margin-left: 12%;
   border: none;
   border-radius: 10px;
   cursor: pointer;
-  width: 80%;
+  width: 50%;
   border-radius: 30px;
-  height: 40px;
+  border: 2px solid #c7e8ca;
 }
-button:hover {
-  opacity: 0.8;
-  background-color: #EAE7B1;
+.BtnValidation button:hover {
+  color: #3c6255;
 }
-

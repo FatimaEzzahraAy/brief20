@@ -1,10 +1,23 @@
-import { useState } from "react";
+// import { useState } from "react";
 
-function Categorie({ catNouv, setCatNouv, tableType, setTableType }) {
+function Categorie({
+  catNouv,
+  setCatNouv,
+  tableType,
+  setTableType,
+  setCatAjouter,
+}) {
+  let erreurCat = "";
   function AjouterCat(e) {
     e.preventDefault();
-    setTableType([...tableType, { AjCat: catNouv }]);
+
+    if (catNouv === "") {
+      erreurCat = "Veuillez remplir la catégorie";
+    } else {
+      setTableType([...tableType, { AjCat: catNouv }]);
+    }
   }
+
   return (
     <div>
       {/* <h3>Ajouter une catégorie:</h3> */}
@@ -15,7 +28,11 @@ function Categorie({ catNouv, setCatNouv, tableType, setTableType }) {
             placeholder="Catégorie"
             onChange={(e) => setCatNouv(e.target.value)}
           />
-          <button onClick={AjouterCat}>Ajouter une catégorie</button>
+          <span>{erreurCat}</span>
+          <div className="BtnValidation">
+            <button onClick={AjouterCat}>Ajouter</button>
+            <button onClick={() => setCatAjouter("no")}>Fermer</button>
+          </div>
         </div>
       </form>
     </div>
